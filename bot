@@ -1,0 +1,56 @@
+import discord
+import random
+from discord.ext import commands
+
+
+
+intents = discord.Intents.default()
+
+intents.members = True
+
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='/', intents=intents)
+
+img_step = ["https://i.ytimg.com/vi/zPW0yJgBCjc/maxresdefault.jpg",
+            "https://balthazar.club/uploads/posts/2023-01/1674646433_balthazar-club-p-podelki-iz-otkhodov-svoimi-rukami-krasivo-60.jpg",
+            "https://avatars.mds.yandex.net/i?id=737e432693a2cf8f418e89a37d59fcb937a596b9-7451990-images-thumbs&n=13",
+            "https://balthazar.club/uploads/posts/2023-01/1674646383_balthazar-club-p-podelki-iz-otkhodov-svoimi-rukami-krasivo-8.jpg",
+            "https://ladushki-club.ru/wp-content/uploads/9/c/4/9c40ca799c4433769464d396efe92bd1.jpeg"]
+
+
+@bot.command()
+async def buy_sort(ctx):
+    await ctx.send("https://санкт-петербург.железная-мебель.рф/catalog/dlya-otkhodov/urny-dlya-razdelnogo-sbora-musora/?utm_source=Vitamin-yandex&utm_medium=cpc&utm_campaign=Для%20мусора%20Санкт-Петербург%20ПОИСК&yclid=7068245185029472255")
+
+
+@bot.command()
+async def sort(ctx):
+    await ctx.send('''1 Отделите опасные предметы: батарейки, градусники,                                                    
+                   
+                   бытовую химию, краски, растворители, ртутные лампы. Сдайте их в специально отведённые места.
+
+                   2 Все остальные отходы разделите на 2 части:
+                      Неперерабатываемые отходы: остатки еды, бытовой мусор.
+                      То, что можно переработать: бумага, текстиль, стекло, пластик, алюминиевые и жестяные ёмкости.     
+                   
+                    Для второй категории отходов заведите отдельные пакеты,
+                     специальные наборы ёмкостей или компактные многосекционные контейнеры.
+                       Прежде чем поместить предметы в эти ёмкости, переберите их, снимите этикетки, ополосните.
+                         С бумаг уберите скрепки, файлы, обложки.
+                         Чтобы сэкономить место, металлические банки и пластиковые бутылки можно сплющить.         
+                      ''')
+                   
+                   
+@bot.command()
+async def di(ctx):
+     await ctx.send(random.choice(img_step))                    
+
+
+
+
+
+
+
+
+bot.run("MTI3MTgzNjkxMDQwNjQ3MTcyNA.G02dsU.ewNpbHVXG0H1U24gMKguS_1ZXFLU7qxAKjDsbw")
